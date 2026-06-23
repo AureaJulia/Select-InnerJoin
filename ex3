@@ -1,0 +1,5 @@
+SELECT Products.ProductName, Suppliers.City
+FROM Products
+INNER JOIN Suppliers
+ON Products.SupplierID = Suppliers.SupplierID
+WHERE Products.Price > 50;
