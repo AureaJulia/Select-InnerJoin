@@ -1,0 +1,8 @@
+SELECT 
+    Products.ProductName,
+    Suppliers.SupplierName,
+    Suppliers.Country
+FROM Products
+INNER JOIN Suppliers
+ON Products.SupplierID = Suppliers.SupplierID
+WHERE Products.CategoryID = 2;
