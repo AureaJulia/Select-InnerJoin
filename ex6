@@ -1,0 +1,5 @@
+SELECT Orders.OrderID, Orders.OrderDate, Shippers.Phone
+FROM Orders
+INNER JOIN Shippers
+ON Orders.ShipperID = Shippers.ShipperID
+WHERE Orders.OrderDate LIKE '2023%'
