@@ -1,0 +1,5 @@
+SELECT Products.ProductName, Suppliers.SupplierName
+FROM Products
+INNER JOIN Suppliers
+ON Products.SupplierID = Suppliers.SupplierID
+WHERE Suppliers.Country LIKE 'Brazil' OR 'USA';
