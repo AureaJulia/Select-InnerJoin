@@ -1,0 +1,4 @@
+SELECT Orders.OrderID, Orders.OrderDate, Shippers.ShipperName
+FROM Orders
+INNER JOIN Shippers
+ON Orders.ShipperID = Shippers.ShipperID;
