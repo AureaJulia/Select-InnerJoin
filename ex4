@@ -1,0 +1,5 @@
+SELECT Orders.OrderID, Shippers.ShipperName
+FROM Orders
+INNER JOIN Shippers
+ON Orders.ShipperID = Shippers.ShipperID
+WHERE Shippers.ShipperName LIKE 'Speedy Express';
