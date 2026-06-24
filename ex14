@@ -1,0 +1,14 @@
+SELECT 
+    Products.ProductName,
+    Suppliers.SupplierName,
+    Shippers.ShipperName
+FROM Orders
+INNER JOIN OrderDetails 
+    ON Orders.OrderID = OrderDetails.OrderID
+INNER JOIN Products
+    ON OrderDetails.ProductID = Products.ProductID
+INNER JOIN Suppliers
+    ON Products.SupplierID = Suppliers.SupplierID
+INNER JOIN Shippers
+    ON Orders.ShipperID = Shippers.ShipperID
+WHERE Orders.OrderID = 10248;
