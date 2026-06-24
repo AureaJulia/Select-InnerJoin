@@ -1,0 +1,6 @@
+SELECT suppliers.SupplierName,
+Products.ProductName
+FROM Suppliers
+LEFT JOIN Products
+ON Products.SupplierID = Suppliers.SupplierID
+WHERE Suppliers.Country = 'Germany'
