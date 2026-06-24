@@ -1,0 +1,6 @@
+SELECT Shippers.ShipperName,
+COUNT (Orders.OrderID)
+FROM Shippers
+LEFT JOIN Orders
+ON Shippers.ShipperID = Orders.ShipperID
+GROUP BY Shippers.ShipperID, Shippers.ShipperName;
