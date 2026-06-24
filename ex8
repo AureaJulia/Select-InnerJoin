@@ -1,0 +1,5 @@
+SELECT Orders.OrderID, Shippers.ShipperName
+FROM Orders
+INNER JOIN Shippers
+ON Shippers.ShipperID = Orders.ShipperID
+ORDER BY Shippers.ShipperName ASC;
