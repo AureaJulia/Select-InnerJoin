@@ -1,0 +1,4 @@
+SELECT suppliers.SupplierName,
+products.ProductName
+FROM products
+RIGHT JOIN Suppliers ON products.SupplierID = suppliers.SupplierID
