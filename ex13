@@ -2,4 +2,4 @@ SELECT Shippers.ShipperName,
 Orders.ShipperID
 FROM Shippers
 LEFT JOIN Orders
-ON Orders.ShipperID = Shippers.ShipperID
+ON Orders.ShipperID = Shippers.ShipperID;
