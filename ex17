@@ -1,0 +1,8 @@
+SELECT Suppliers.ContactName, Products.ProductName
+FROM Suppliers
+JOIN Products
+ON Suppliers.SupplierID = Products.SupplierID
+JOIN Categories
+ON Products.CategoryID = Categories.CategoryID
+WHERE Categories.CategoryID IN (1,3,5)
+AND Suppliers.Country = 'UK'
