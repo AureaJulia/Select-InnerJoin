@@ -4,4 +4,4 @@ JOIN Products
 ON Suppliers.SupplierID = Products.SupplierID
 JOIN OrderDetails
 ON Products.ProductID = OrderDetails.ProductID
-WHERE OrderDetails.OrderID IS NULL
+WHERE OrderDetails.OrderID IS NULL;
