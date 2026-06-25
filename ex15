@@ -1,0 +1,11 @@
+SELECT Suppliers.SupplierName, Suppliers.City, Orders.OrderDate
+FROM Suppliers
+INNER JOIN Products
+ON Suppliers.SupplierID = Products.ProductID
+JOIN OrderDetails
+ON Products.ProductID = OrderDetails.OrderDetailID
+JOIN Orders
+ON OrderDetails.OrderDetailID = Orders.OrderID
+JOIN Shippers
+ON Orders.OrderID = Shippers.ShipperID
+WHERE Shippers.ShipperName = 'United Package'
