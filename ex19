@@ -1,0 +1,10 @@
+SELECT Products.ProductName, Categories.CategoryName, Suppliers.SupplierName
+FROM Products
+JOIN Categories
+ON Products.CategoryID = Categories.CategoryID
+JOIN Suppliers
+ON Products.SupplierID = Suppliers.SupplierID
+WHERE Products.Price > (
+SELECT AVG (Products.Price)
+FROM Products
+);
