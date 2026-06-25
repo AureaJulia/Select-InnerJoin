@@ -1,0 +1,11 @@
+SELECT 
+    Suppliers.SupplierName,
+    SUM(Orders.Freight) AS Total_Frete
+FROM Suppliers
+JOIN Products
+    ON Suppliers.SupplierID = Products.SupplierID
+JOIN OrderDetails
+    ON Products.ProductID = OrderDetails.ProductID
+JOIN Orders
+    ON OrderDetails.OrderID = Orders.OrderID
+GROUP BY Suppliers.SupplierName;
